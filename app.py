@@ -20,8 +20,10 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # Carregar assets
-lottie_coding_pc = "https://lottie.host/941a0b95-a67b-4b6f-bc1e-c36b6a4ab8ec/gbl3Qpyi3x.json"
-lottie_coding_hello = "https://lottie.host/cccc3d60-af7b-4cfe-8974-e910ae3e20e2/IpzviRqcnK.json"
+lottie_pc_url = "https://lottie.host/941a0b95-a67b-4b6f-bc1e-c36b6a4ab8ec/gbl3Qpyi3x.json"
+lottie_hello_url = "https://lottie.host/cccc3d60-af7b-4cfe-8974-e910ae3e20e2/IpzviRqcnK.json"
+lottie_hello = load_lottieurl(lottie_hello_url)
+lottie_pc = load_lottieurl(lottie_pc_url)
 
 # Header
 hleft_column, hright_column = st.columns(2)
@@ -31,7 +33,7 @@ with hleft_column:
     st.write(
         "Eu sou apaixonado por Python e criação de jogos, estou estudando Godot Engine na linguagem C# e GDscript, sempre buscando uma forma de deter mais conhecimento e ser mais eficiente.")
 with hright_column:
-    st_lottie(lottie_coding_hello, height=300, key="hello_coding")
+    st_lottie(lottie_hello, height=300, key="hello")
 
 # Oque eu faço
 with st.container():
@@ -50,7 +52,7 @@ with st.container():
             Se soa interessante para você, meu Linkedin e Github estão no final da página
                  """)
     with aright_column:
-        st_lottie(lottie_coding_pc, height=300, key="pc_coding")
+        st_lottie(lottie_pc, height=300, key="pc")
 
     contact_form = """
     <form action="https://formsubmit.co/andre.piratello@hotmail.com" method="POST">
