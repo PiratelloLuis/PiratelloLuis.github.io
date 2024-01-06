@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 
-st.set_page_config(page_title="André Zanini", page_icon="🧑‍💻", layout="wide")
+st.set_page_config(page_title="Sobre mim", page_icon="🧑‍💻", layout="wide")
 
 
 def load_lottieurl(url):
@@ -17,6 +17,8 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
+local_css("style/style.css")
+
 # Carregar assets
 lottie_coding_pc = "https://lottie.host/941a0b95-a67b-4b6f-bc1e-c36b6a4ab8ec/gbl3Qpyi3x.json"
 lottie_coding_hello = "https://lottie.host/cccc3d60-af7b-4cfe-8974-e910ae3e20e2/IpzviRqcnK.json"
@@ -24,7 +26,7 @@ lottie_coding_hello = "https://lottie.host/cccc3d60-af7b-4cfe-8974-e910ae3e20e2/
 # Header
 hleft_column, hright_column = st.columns(2)
 with hleft_column:
-    st.subheader("Oi, meu nome é André Luis Piratello Zanini :wave:")
+    st.subheader("Oi, meu nome é André Luis :wave:")
     st.title("Estudante de programação UNIFIO, Ourinhos SP")
     st.write(
         "Eu sou apaixonado por Python e criação de jogos, estou estudando Godot Engine na linguagem C# e GDscript, sempre buscando uma forma de deter mais conhecimento e ser mais eficiente.")
